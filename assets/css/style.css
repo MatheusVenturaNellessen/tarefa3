@@ -23,12 +23,31 @@
     color: var(--color);
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
+a {
+    color: var(--cor-destaque);
+    text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.2);
+}
+
+a:hover {
+    font-size: 1.1em;
+    transition: all .5s ease;
+}
+
+strong {
+    color: var(--cor-destaque);
+}
+
 header {
-    background-image: url();
+    background-image: url('../img/banner.jpg');
     background-repeat: no-repeat;
     background-position: left center;
-    background-size: contain;
+    background-size: cover;
     padding: 50px;
+    padding-bottom: 10px;
 }
 
 header > h1 {
@@ -36,11 +55,41 @@ header > h1 {
     font-variant: small-caps;
 }
 
-
+                        
 header > h2, h3 {
     font-size: 3em;
     font-weight: 500;
-    color: var(--color)
+}
+
+header > h1, h2, h3 {
+    color: #000;
+    text-shadow: 1px 1px 5px rgba(255, 255, 255, 0.6);
+}
+
+header > h3 {
+    margin-bottom: 25px;
+}
+
+nav {
+
+}
+
+nav li {
+    display: inline;
+    margin-right: 40px;
+}
+
+nav a {
+    background-color: #ffffffaa;
+    border-top-right-radius: 10px;
+    border-top-left-radius: 10px;
+    padding: 10px;
+    text-decoration: none;
+    color: #000;
+}
+
+nav a:hover {
+    border-bottom: 1px solid var(--cor-destaque);
 }
 
 main {
@@ -50,7 +99,6 @@ main {
 main h2, main h3 {
     font-size: 2em;
     text-align: center;
-    color: var();
     margin: 0.5em 0;
 }
 
@@ -64,7 +112,7 @@ main p {
 main hr {
     width: 85%;
     margin: 100px;
-    border: 1px solid;
+    border: 1px solid #1294ff30;
 }
 
 .default-section {
@@ -78,20 +126,26 @@ main hr {
     justify-content: space-around;
     align-items: flex-start;
     text-align: left;
-    width: 90%;
+    width: 80%;
     padding-top: 5em;
+    text-align: center;
 }
 
 .speakers-box {
     border-radius: 20px;
     box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.3);
     padding: 25px;
+    height: 100%;
     width: 30%;
 }
 
 .speakers-box > img {
     height: auto;
     width: 100%;
+    height: 400px;
+    width: auto;
+    border-radius: 0 5%;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.6);
 }
 
 .speakers-box > h3 {
@@ -102,19 +156,43 @@ main hr {
 #about-section {
     display: flex;
     gap: 100px;
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
-    width: 80%;
+    width: 70%;
     margin: auto;
-    text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.1);
 }
 
-#local-section p {
+img#about-image {
+    height: 600px;
+    width: auto;
+}
+
+#local-section > h2, #local-section > p {
     text-align: center;
+    margin: 25px;
+}
+
+fieldset {
+    border: 3px solid var(--interativo);
+    display: inline;
+    padding: 5px;
+    border-radius: 0 5%;
+
+}
+
+legend {
+    text-align: left;
+    margin: 0; padding: 0 20px;
+}
+
+iframe {
+    border-radius: 0 5%;
+    margin: 0; padding: 0;
+    border: none;
 }
 
 #form-section {
-    padding-bottom: 5em;
+    padding-bottom: 70px;
     text-align: center;
 }
 
@@ -125,45 +203,41 @@ main hr {
 
 label, input, button {
     font-size: 1.25em;   
-    margin: 0.5em 0;
+    margin: 10px 0;
 }
 
 input {
     height: 2em;
     width: 40%;
-    padding: 10px;
-    border-radius: 20px;
+    padding: 15px;
+    border-radius: 15px;
 }
 
 button {
     background-color: var(--interativo);
-    height: 3em;
-    width: 47%;
+    height: 60px; width: 47%;
     padding: 15px;
     border-radius: 20px;
-    color: var();
     cursor: pointer;
 }
 
 button:hover  {
     background-color: var(--cor-destaque);
-    color: var();
 }
 
 footer {
     padding: 25px;
     display: flex;
     justify-content: space-evenly;
-    align-items: flex-start;
+    align-items: center;
     background-color: var(--cor-secundaria);
 }
 
 footer h2 {   
     font-size: 2em;
     text-align: center;
-    color: var();
     
-    margin: 0.5em 0;
+    margin: 10px 0;
 }
 
 footer p {
@@ -173,40 +247,4 @@ footer p {
 footer li {
     margin: 10px;
     list-style-position: inside;
-}
-
-img.profile {
-    height: 300px;
-    width: 250px;
-    border-radius: 0 5%;
-    box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.3);
-}
-
-img#about-image {
-    height: 600px;
-    width: auto;
-}
-
-iframe {
-    border-radius: 0 5%;
-    
-}
-
-#speakers-section {
-    text-align: center;
-}
-
-a {
-    color: var(--cor-destaque);
-    text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.2);
-}
-
-a:hover {
-    font-size: 1.25em;
-    transition: all .5s ease;
-}
-
-strong {
-    color: var(--cor-destaque);
-    text-shadow:0px 0px 1px rgba(0, 0, 0);
 }
