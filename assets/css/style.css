@@ -109,6 +109,10 @@ main hr {
     text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.1);
 }
 
+#local-section p {
+    text-align: center;
+}
+
 #form-section {
     padding-bottom: 5em;
     text-align: center;
@@ -174,7 +178,7 @@ footer li {
 img.profile {
     height: 300px;
     width: 250px;
-    border-radius: 0 15%;
+    border-radius: 0 5%;
     box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.3);
 }
 
@@ -184,7 +188,7 @@ img#about-image {
 }
 
 iframe {
-    border-radius: 0 15%;
+    border-radius: 0 5%;
     
 }
 
