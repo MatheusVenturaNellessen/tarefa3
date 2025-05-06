@@ -5,6 +5,7 @@
     src: url('../fonts/ProductSans-Regular.ttf');
 }
 
+/* Variáveis CSS */
 :root {
     --default-font: 'Google Sans', sans-serif;
 
@@ -70,8 +71,22 @@ header > h3 {
     margin-bottom: 25px;
 }
 
-nav {
+#hambuguer {
+    display: none;
+}
 
+nav button {
+    height: 5vh; width: 5vh;
+    border-radius: 50%;
+    padding: 0;
+    background-color: var(--fundo-principal);
+}
+
+nav button:hover {
+    font-size: 1.6em;
+    background-color: var(--fundo-principal);
+    box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.4);
+    transition: all .2s ease;
 }
 
 nav li {
@@ -215,10 +230,15 @@ input {
 
 button {
     background-color: var(--interativo);
-    height: 60px; width: 47%;
+    height: 60px; width: 40%;
     padding: 15px;
     border-radius: 20px;
     cursor: pointer;
+}
+
+#clear-btn {
+    width: 7%;
+    padding: 0;
 }
 
 button:hover  {
@@ -247,4 +267,186 @@ footer p {
 footer li {
     margin: 10px;
     list-style-position: inside;
+}
+
+/* Media Query para dispositivos até 990px de viewport de largura */
+@media (max-width: 990px) {    
+    header {
+        padding: 4vh;
+        padding-bottom: 2vw;
+    }
+    
+    header > h1 {
+        font-size: 12vw;
+    }
+    
+                            
+    header > h2, h3 {
+        font-size: 5.5vw;
+    }
+    
+    header > h3 {
+        margin-bottom: 3vh;
+    }
+    
+    #hambuguer {
+        display: block;
+    }
+
+    nav > ul{
+        display: none;
+    }
+
+    nav > ul.show {
+        display: block;
+    }
+
+    nav li {
+        display: block;
+        margin: 2vh 0;
+        width: 20vw;
+        background-color: #ffffffbb;
+        border-radius: 20px;
+        padding: 5px;
+    }
+    
+    nav a {
+        background-color: unset;
+    }
+    
+    nav a:hover {
+        border: none;
+        transition: none;
+    }
+
+    nav li:hover {
+        border-bottom: 3px solid var(--cor-destaque);
+    }
+    
+    main {
+        background-color: var(--fundo-principal);
+    }
+    
+    main h2, main h3 {
+        font-size: 6vw;
+        margin: 0.5em 0;
+    }
+    
+    main p {
+        font-size: 4vw;  
+        margin: 0.5em 0;
+    }
+    
+    main hr {
+        margin: auto;
+    }
+    
+    .default-section {
+        width: 100%;
+        max-width: 990px;
+        margin: auto;
+        box-sizing: border-box;
+    }
+    
+    #speakers-section {
+        display: block;
+        padding-top: 5em;
+    }
+    
+    .speakers-box {
+        height: 100%;
+        width: 100%;
+        margin: 4vh 0;
+    }
+    
+    .speakers-box > img {
+        height: 50vh; width: auto;
+    }
+    
+    #about-section {
+        display: block;
+        text-align: center;
+        margin: 4vh auto;
+    }
+    
+    img#about-image {
+        height: 30vh;
+        width: auto;
+    }
+    
+    #loal-section {
+        margin: 0; padding: 0;
+    }
+
+    #local-section > h2 , #local-section > p {
+        margin: 3vh;
+
+    }
+    
+    fieldset {
+        border: 3px solid var(--interativo);
+        display: inline;
+        padding: 5px;
+        border-radius: 0 5%;
+    
+    }
+    
+    legend {
+        text-align: left;
+        margin: 0; padding: 0 20px;
+    }
+    
+    iframe {
+        height: 40vh; width: 80vw;
+        border-radius: 0 5%;
+        border: none;
+    }
+    
+    #form-section {
+        padding-bottom: 4vh;
+    }
+    
+    label, input, button {
+        font-size: 4vw;   
+        margin: 10px 0;
+    }
+
+    input {
+        height: 4vh; width: 55%;
+    }
+    
+    button {
+        height: 7vh; width: 55%;
+    }
+ 
+    #clear-btn {
+        width: 15%;
+        padding: 0;
+    }
+    
+    footer {
+        padding: 1vh;
+        display: block;
+    }
+
+    footer section {
+        margin: 4vh auto;
+        text-align: center;
+    }
+
+    footer h2 {   
+        font-size: 6vw;
+        margin: 2vh 0;
+    }
+    
+    footer p {
+        font-size: 4vw;
+        margin: 2vh 0;
+    }
+    
+    footer li {
+        text-align: center;
+        margin: 1vh;
+        list-style-position: inside;
+    }
 }

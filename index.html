@@ -3,16 +3,18 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>GDG Talks</title>
     <link rel="stylesheet" href="./assets/css/style.css">
+    <link rel="shortcut icon" href="./assets/img/favicon.ico" type="image/x-icon">
 </head>
 <body>
-    <header>
+    <header> <!-- Cabeçalho do site contendo banner, título, slogan, data e menu--> 
         <h1>GDG Talks</h1>
         <h2>Palestras que inspiram o amanhã</h2>
-        <h3>Save the Date XX/XX</h3>
-        <nav>
-            <ul>
+        <h3>Save the Date 24/05</h3>
+        <nav> <!-- Menu hambúguer e navegação-->
+            <button id="hambuguer">☰</button>
+            <ul id="links">
                 <li><a href="#speakers-section" target="_self">Palestras</a></li>
                 <li><a href="#as" target="_self">Sobre</a></li>
                 <li><a href="#ls" target="_self">Local</a></li>
@@ -21,25 +23,25 @@
         </nav>
     </header>
     <main>
-        <section class="default-section" id="speakers-section">
-            <div class="speakers-box">
+        <section class="default-section" id="speakers-section"> <!-- Seção Palestrantes-->
+            <div class="speakers-box"> <!-- Palestrante 1-->
                 <img src="./assets/img/woman.jpg" alt="Jessica Fisher Photo">
                 <h3>Jessica Fisher</h3>
                 <p><strong><a href="" target="_self">Jessica Fisher</a></strong> é engenheira de software com especialização em desenvolvimento web escalável. Apaixonada por arquitetura de microsserviços, Jessica já atuou em startups do Vale do Silício e atualmente lidera uma equipe de engenharia focada em soluções cloud-native.</p>
             </div>
-            <div class="speakers-box">
+            <div class="speakers-box"> <!-- Palestrante 2-->
                 <img src="./assets/img/man1.jpg" alt="Mark Green Photo">
                 <h3>Mark Green</h3>
                 <p><strong><a href="#" target="_self">Mark Green</a></strong> é cientista de dados com foco em machine learning e inteligência artificial. Atua na construção de modelos preditivos para grandes empresas de e-commerce. Além disso, é palestrante internacional e mentor de novos profissionais da área.</p>
             </div>
-            <div class="speakers-box">
+            <div class="speakers-box"> <!-- Palestrante 3-->
                 <img src="./assets/img/man2.jpg" alt="Alexander Schmidt Photo">
                 <h3>Alexander Schmidt</h3>
                 <p><strong><a href="#" target="_self">Alexander Schmidt</a></strong> é especialista em cibersegurança com mais de 15 anos de experiência na área. Reconhecido por sua atuação em prevenção de ataques cibernéticos e resposta a incidentes, defende a privacidade digital e é conhecido por suas abordagens práticas e eficientes.</p>
             </div>
         </section>
         <hr id="as">
-        <section id="about-section">
+        <section id="about-section"> <!-- Secão Sobre-->
             <div id="about-image-box">
                 <img id="about-image" src="./assets/img/about.png" alt="Imagem de...">
             </div>
@@ -50,7 +52,7 @@
             </div>
         </section>
         <hr id="ls">
-        <section class="default-section" id="local-section">
+        <section class="default-section" id="local-section"> <!-- Seção Localização com iframe do Google Maps-->
             <h2>É aqui onde tudo acontecerá!</h2>
             <P>Confira o local do evento e prepare-se para uma imersão inesquecível em conhecimento, inovação e conexões que podem transformar sua carreira.</P>
             <fieldset>
@@ -59,21 +61,22 @@
             </fieldset>
         </section>
         <hr id="fs">
-        <section class="default-section" id="form-section">
+        <section class="default-section" id="form-section"> 
             <h2>Garanta sua Vaga Agora!</h2>
             <p>As inscrições estão abertas para o evento mais aguardado da comunidade tech.</p>
-            <form method="post" autocomplete="on">
+            <form class="form" action="#" method="POST" autocomplete="on"> <!-- Formulário para cadastro do evento --> 
                 <label for="name">Nome:</label>
                 <input type="text" id="name" placeholder="João da Silva" required>
                 <br>
                 <label for="email">E-mail:</label>
                 <input type="email" id="email" placeholder="joao.da.silva@email.com" required>
                 <br>
-                <button type="submit">Inscrever</button>
+                <button>Inscrever</button>
+                <button type="reset" id="clear-btn">⟳</button>
             </form>
         </section>
     </main>
-    <footer>
+    <footer> <!-- Rodapé do site contendo indormações de contato dos e os organizadores -->
         <section class="" id="contact">
             <h2>Contatos</h2>
             <ul>
@@ -82,7 +85,6 @@
                 <li>Instragram: <a href="https://www.instagram.com/gdglondrina/">@gdglondrina</a></li>
             </ul>
         </section>
-        <hr>
         <section class="" id="organizers">
             <h2>Organizadores</h2>
             <p>Para mais detalhes, clique <a href="#" target="_blank">aqui</a>.</p>
@@ -95,5 +97,7 @@
             </ul>
         </section>
     </footer>
+
+    <script src="./assets/js/main.js"></script>
 </body>
 </html>
