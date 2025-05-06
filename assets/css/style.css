@@ -116,6 +116,7 @@ main hr {
 
 #form-section p {
     text-align: center;
+    text-align: center;
 }
 
 label, input, button {
@@ -183,7 +184,7 @@ img#about-image {
 }
 
 iframe {
-    border-radius: 30% 50% 70% 10%;
+    border-radius: 0 15%;
     
 }
 
